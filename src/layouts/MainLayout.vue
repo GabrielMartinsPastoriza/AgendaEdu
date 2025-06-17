@@ -4,6 +4,16 @@
     <q-header elevated>
       <q-toolbar>
 
+        <!-- Botão Home: leva sempre de volta ao HomePage -->
+        <q-btn 
+          flat 
+          dense 
+          round 
+          icon="home" 
+          to="/" 
+          aria-label="Início" 
+        />
+
         <!-- Botão de menu: visível em telas pequenas -->
         <q-btn
           flat
