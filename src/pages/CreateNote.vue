@@ -1,4 +1,3 @@
-<!-- /pages/CreateNote.vue -->
 <template>
   <q-page padding>
     <note-form @submit="handleSave" />
@@ -14,6 +13,7 @@ const notesStore = useNotesStore()
 const router = useRouter()
 
 function handleSave(note) {
+  note.createdAt = new Date().toISOString()  // <-- Adiciona a data atual no formato ISO
   notesStore.saveNote(note)
   router.push('/notes')
 }
